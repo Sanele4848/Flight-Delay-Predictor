@@ -120,11 +120,11 @@ if 'app_loaded' not in st.session_state:
 if 'show_toast' not in st.session_state:
     st.session_state.show_toast = False
 
-# Custom CSS - Google Material Design 3
+
 st.markdown("""
 <style>
     /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
 
     /* Simplified Loading Screen */
     .loading-screen {
@@ -172,7 +172,7 @@ st.markdown("""
     /* Reset and Base */
     .stApp {
         background: #fafafa;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Manrope', sans-serif;
     }
 
     /* Hide default Streamlit elements */
@@ -182,7 +182,7 @@ st.markdown("""
 
     /* Typography */
     h1, h2, h3 {
-        font-family: 'Google Sans', sans-serif !important;
+        font-family: 'Manrope', sans-serif !important;
         font-weight: 500 !important;
         color: #1f1f1f !important;
         letter-spacing: -0.02em;
@@ -336,7 +336,7 @@ st.markdown("""
         border: none !important;
         border-radius: 100px !important;
         padding: 14px 36px !important;
-        font-family: 'Google Sans', sans-serif !important;
+        font-family: 'Manrope', sans-serif !important;
         font-weight: 500 !important;
         font-size: 1rem !important;
         letter-spacing: 0.0107em !important;
@@ -388,7 +388,7 @@ st.markdown("""
         background: transparent;
         border: none;
         color: #3c4043;
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-weight: 500;
         padding: 14px 18px;
         border-radius: 8px 8px 0 0;
@@ -403,14 +403,14 @@ st.markdown("""
 
     /* Metrics */
     [data-testid="stMetricValue"] {
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-size: 2.25rem;
         font-weight: 500;
         color: #1f1f1f;
     }
 
     [data-testid="stMetricLabel"] {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-size: 0.85rem;
         color: #3c4043;
         text-transform: uppercase;
@@ -430,7 +430,7 @@ st.markdown("""
         background: white;
         border-radius: 8px;
         border: 1px solid #dadce0;
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         color: #1f1f1f;
         font-size: 1rem;
         padding: 16px !important;
@@ -497,7 +497,7 @@ st.markdown("""
 
     .nav-logo {
         width: auto;
-        height: 40px;
+        height: 50px;
         object-fit: contain;
     }
 
@@ -506,7 +506,7 @@ st.markdown("""
     }
 
     .nav-title {
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-size: 1.5rem;
         font-weight: 500;
         color: #1f1f1f;
@@ -520,7 +520,7 @@ st.markdown("""
     }
 
     .nav-link {
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-size: 0.95rem;
         font-weight: 500;
         color: #5f6368;
@@ -549,7 +549,7 @@ st.markdown("""
         border: none;
         padding: 10px 24px;
         border-radius: 24px;
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-weight: 500;
         font-size: 0.95rem;
         cursor: pointer;
@@ -638,7 +638,7 @@ st.markdown("""
         padding: 15px 24px;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         animation: slideInDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         overflow: hidden;
     }
 
@@ -715,7 +715,7 @@ st.markdown("""
     }
 
     .toast-title {
-        font-family: 'Google Sans', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-size: 1.2rem;
         font-weight: 500;
         margin-bottom: 4px;
@@ -818,7 +818,7 @@ st.markdown(f"""
     <div class="nav-content">
         <div class="nav-brand">
             {logo_html}
-            <span class="nav-title">Flight Delay Analytics</span>
+            <span class="nav-title"></span>
         </div>
         <div class="nav-links">
             <a class="nav-link nav-link-home" href="#home" data-section="home">Home</a>
@@ -1026,8 +1026,8 @@ if predict_btn and airport:
             mode="gauge+number+delta",
             value=result['delay_probability'] * 100,
             domain={'x': [0, 1], 'y': [0, 1]},
-            title={'text': "Delay Probability", 'font': {'size': 20, 'family': 'Google Sans'}},
-            number={'suffix': "%", 'font': {'size': 48, 'family': 'Google Sans'}},
+            title={'text': "Delay Probability", 'font': {'size': 20, 'family': 'Manrope'}},
+            number={'suffix': "%", 'font': {'size': 48, 'family': 'Manrope'}},
             gauge={
                 'axis': {'range': [None, 100], 'tickwidth': 1, 'tickcolor': "#dadce0"},
                 'bar': {'color': risk_profile['color']},
@@ -1050,7 +1050,7 @@ if predict_btn and airport:
 
         fig_gauge.update_layout(
             paper_bgcolor="white",
-            font={'color': "#1f1f1f", 'family': "Roboto"},
+            font={'color': "#1f1f1f", 'family': "Manrope"},
             height=300,
             margin=dict(l=20, r=20, t=80, b=20)
         )
@@ -1071,7 +1071,7 @@ if predict_btn and airport:
                     position: relative;
                     overflow: hidden;">
             <div style="color: {risk_profile['color']}; font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">Risk Level</div>
-            <div style="font-size: 2.5rem; font-weight: 600; color: {risk_profile['color']}; font-family: 'Google Sans', sans-serif; margin-bottom: 16px; position: relative; z-index: 1;">{risk_profile['level']}</div>
+            <div style="font-size: 2.5rem; font-weight: 600; color: {risk_profile['color']}; font-family: 'Manrope', sans-serif; margin-bottom: 16px; position: relative; z-index: 1;">{risk_profile['level']}</div>
             <div style="color: #1f1f1f; font-size: 0.95rem; line-height: 1.5; position: relative; z-index: 1;">{risk_profile['message'][:120]}...</div>
         </div>
         """, unsafe_allow_html=True)
@@ -1091,7 +1091,7 @@ if predict_btn and airport:
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
                 <div style="color: #5f6368; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">Avg Delay</div>
             </div>
-            <div style="font-size: 2rem; font-weight: 600; color: #1f1f1f; font-family: 'Google Sans', sans-serif;">{result['avg_delay_minutes']:.0f}<span style="font-size: 1rem; color: #5f6368; font-weight: 400;"> min</span></div>
+            <div style="font-size: 2rem; font-weight: 600; color: #1f1f1f; font-family: 'Manrope', sans-serif;">{result['avg_delay_minutes']:.0f}<span style="font-size: 1rem; color: #5f6368; font-weight: 400;"> min</span></div>
             <div style="color: #5f6368; font-size: 0.85rem; margin-top: 8px;">When delays occur</div>
         </div>
         """, unsafe_allow_html=True)
@@ -1106,7 +1106,7 @@ if predict_btn and airport:
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
                 <div style="color: #5f6368; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">Expected</div>
             </div>
-            <div style="font-size: 2rem; font-weight: 600; color: #1f1f1f; font-family: 'Google Sans', sans-serif;">{result['expected_delays_per_100']:.0f}<span style="font-size: 1rem; color: #5f6368; font-weight: 400;">/100</span></div>
+            <div style="font-size: 2rem; font-weight: 600; color: #1f1f1f; font-family: 'Manrope', sans-serif;">{result['expected_delays_per_100']:.0f}<span style="font-size: 1rem; color: #5f6368; font-weight: 400;">/100</span></div>
             <div style="color: #5f6368; font-size: 0.85rem; margin-top: 8px;">Delayed flights</div>
         </div>
         """, unsafe_allow_html=True)
@@ -1126,7 +1126,7 @@ if predict_btn and airport:
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
                 <div style="color: #5f6368; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">vs Average</div>
             </div>
-            <div style="font-size: 2rem; font-weight: 600; color: {comparison_color}; font-family: 'Google Sans', sans-serif;">{abs(comparison):.1f}<span style="font-size: 1rem; font-weight: 400;">%</span></div>
+            <div style="font-size: 2rem; font-weight: 600; color: {comparison_color}; font-family: 'Manrope', sans-serif;">{abs(comparison):.1f}<span style="font-size: 1rem; font-weight: 400;">%</span></div>
             <div style="color: #5f6368; font-size: 0.85rem; margin-top: 8px;">{comparison_text} than avg</div>
         </div>
         """, unsafe_allow_html=True)
@@ -1195,8 +1195,8 @@ if predict_btn and airport:
                 yaxis_title='Probability (%)',
                 plot_bgcolor='white',
                 paper_bgcolor='white',
-                font=dict(family='Roboto', size=14, color='#1f1f1f'),
-                title_font=dict(family='Google Sans', size=17, color='#1f1f1f', weight=500),
+                font=dict(family='Manrope', size=14, color='#1f1f1f'),
+                title_font=dict(family='Manrope', size=17, color='#1f1f1f', weight=500),
                 height=400,
                 margin=dict(l=60, r=40, t=60, b=40),
                 xaxis=dict(showgrid=False, showline=True, linewidth=1, linecolor='#dadce0',
@@ -1225,8 +1225,8 @@ if predict_btn and airport:
                 yaxis_title='Minutes',
                 plot_bgcolor='white',
                 paper_bgcolor='white',
-                font=dict(family='Roboto', size=14, color='#1f1f1f'),
-                title_font=dict(family='Google Sans', size=17, color='#1f1f1f', weight=500),
+                font=dict(family='Manrope', size=14, color='#1f1f1f'),
+                title_font=dict(family='Manrope', size=17, color='#1f1f1f', weight=500),
                 height=400,
                 margin=dict(l=60, r=40, t=60, b=40),
                 xaxis=dict(showgrid=False, showline=True, linewidth=1, linecolor='#dadce0',
@@ -1294,7 +1294,7 @@ if predict_btn and airport:
                 paper_bgcolor='white',
                 xaxis_title='Delay Rate (%)',
                 yaxis_title='',
-                font=dict(family='Roboto', size=14, color='#1f1f1f'),
+                font=dict(family='Manrope', size=14, color='#1f1f1f'),
                 height=400,
                 margin=dict(l=60, r=60, t=20, b=40),
                 xaxis=dict(showgrid=True, gridwidth=1, gridcolor='#e8eaed', showline=True, linewidth=1,
@@ -1334,7 +1334,7 @@ if predict_btn and airport:
                 paper_bgcolor='white',
                 xaxis_title='Delay Rate (%)',
                 yaxis_title='',
-                font=dict(family='Roboto', size=14, color='#1f1f1f'),
+                font=dict(family='Manrope', size=14, color='#1f1f1f'),
                 height=400,
                 margin=dict(l=60, r=60, t=20, b=40),
                 xaxis=dict(showgrid=True, gridwidth=1, gridcolor='#e8eaed', showline=True, linewidth=1,
@@ -1399,7 +1399,7 @@ if predict_btn and airport:
                 paper_bgcolor='white',
                 xaxis_title='Average Delay Rate (%)',
                 yaxis_title='',
-                font=dict(family='Roboto', size=14, color='#1f1f1f'),
+                font=dict(family='Manrope', size=14, color='#1f1f1f'),
                 height=400,
                 margin=dict(l=60, r=60, t=20, b=40),
                 xaxis=dict(showgrid=True, gridwidth=1, gridcolor='#e8eaed',
@@ -1435,7 +1435,7 @@ if predict_btn and airport:
                 paper_bgcolor='white',
                 xaxis_title='Average Delay Rate (%)',
                 yaxis_title='',
-                font=dict(family='Roboto', size=14, color='#1f1f1f'),
+                font=dict(family='Manrope', size=14, color='#1f1f1f'),
                 height=400,
                 margin=dict(l=60, r=60, t=20, b=40),
                 xaxis=dict(showgrid=True, gridwidth=1, gridcolor='#e8eaed',
