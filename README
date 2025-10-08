@@ -1,0 +1,76 @@
+# Flight Delay Predictor
+
+Machine learning system to predict flight delays using historical airline data.
+
+## Project Structure
+
+Flight_Delay_Predictor/
+├── app/
+│   └── Flight_Delay_app.py      # Streamlit web interface
+├── data/
+│   └── Airline_Delay_Cause.csv  # Historical delay data
+├── src/
+│   ├── __init__.py
+│   ├── data_preprocessing.py    # Data cleaning and preparation
+│   ├── feature_engineering.py   # Feature creation
+│   ├── model_training.py        # Model training pipeline
+│   ├── model_evaluation.py      # Model evaluation metrics
+│   ├── prediction_pipeline.py   # Prediction interface
+│   └── utils.py                 # Utility functions
+├── models/                      # Saved model artifacts
+├── main.py                      # Training entry point
+└── requirements.txt
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Train Models
+
+```bash
+python main.py
+```
+
+This will:
+- Load and clean the data
+- Engineer features
+- Train 6 different models
+- Evaluate and select the best model
+- Save artifacts to `models/`
+
+### Run Web App
+
+```bash
+streamlit run app/Flight_Delay_app.py
+```
+
+Navigate to `http://localhost:8501` to use the predictor.
+
+## Features
+
+- **Multiple Models**: Ridge, Decision Tree, Random Forest, KNN, Extra Trees, Gradient Boosting
+- **Temporal Features**: Seasonal patterns, holiday periods, time-based encodings
+- **Operational Metrics**: Cancellation rates, diversion rates, capacity utilization
+- **Historical Patterns**: Carrier/airport historical delay rates, seasonal trends
+- **Interactive UI**: Real-time predictions with seasonal analysis
+
+## Model Performance
+
+The best model is automatically selected based on validation MAE. Expected metrics:
+- Test MAE: ~0.03-0.05
+- Test R²: ~0.60-0.75
+
+## Data Requirements
+
+CSV file with columns:
+- `year`, `month`, `carrier`, `airport`
+- `arr_flights`, `arr_del15`, `arr_cancelled`, `arr_diverted`
+- Delay breakdown columns (carrier_delay, weather_delay, etc.)
+
+## License
+
+MIT

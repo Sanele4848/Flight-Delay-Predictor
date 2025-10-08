@@ -1,0 +1,5 @@
+operational_stress_level,delay_rate,arr_del15,arr_flights
+low,0.1821,3127650.0,18825593.0
+moderate,0.2124,5018021.0,23759238.0
+high,0.2334,1049760.0,4410940.0
+severe,0.2259,69463.0,290750.0
