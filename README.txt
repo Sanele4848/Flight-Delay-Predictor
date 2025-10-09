@@ -1,10 +1,4 @@
 Predicting Flight Delays Using Machine Learning
-Authors: Simphiwe Mkhonza, Sanele Mabuza
-
-Module: BICT332 - Artificial Intelligence Applications
-
-Institution: University of Mpumalanga
-
 1. Project Overview
 This project presents an end-to-end machine learning system for predicting flight delay rates for U.S. domestic flights. The system analyzes historical data to identify patterns related to airlines, airports, and seasonality, providing actionable insights for travelers and industry stakeholders.
 
@@ -90,5 +84,6 @@ streamlit: For building the interactive web application.
 plotly: For creating interactive data visualizations.
 
 joblib: For saving and loading the trained model.
+
 
 A complete list is available in the requirements.txt file.
