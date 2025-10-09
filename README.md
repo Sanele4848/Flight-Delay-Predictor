@@ -2,6 +2,12 @@
 
 -----
 
+## Live Demo
+
+You can interact with the deployed application here: **[flightcast.streamlit.app](https://flightcast.streamlit.app/)**
+
+-----
+
 ## Project Overview
 
 This project presents an end-to-end machine learning system for predicting flight delay rates for U.S. domestic flights. The system analyzes historical data to identify patterns related to airlines, airports, and seasonality, providing actionable insights for travelers and industry stakeholders.
