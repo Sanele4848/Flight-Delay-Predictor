@@ -39,7 +39,7 @@ The project is organized into a modular structure for clarity and maintainabilit
 
 The project uses the "**Flight Delay Data for U.S. Airports by Carrier August 2013 - August 2023**" dataset, which is sourced from the Bureau of Transportation Statistics (BTS).
 
-  * **Source**: Kaggle
+  * **Source**: [Kaggle](https://www.kaggle.com/datasets/sriharshaeedala/airline-delay?resource=download)
   * **Description**: The dataset contains monthly aggregated data on flight arrivals, delays, cancellations, and delay causes for major U.S. airlines across numerous airports.
 
 > **Note**: To run the pipeline, please download the **Airline\_Delay\_Cause.csv** file from the source and place it in a `data/` directory at the root of the project.
