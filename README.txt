@@ -17,7 +17,8 @@ The project is organized into a modular structure for clarity and maintainabilit
 │   ├── model_evaluation.py
 │   ├── model_training.py
 │   └── prediction_pipeline.py
-├── Flight_Delay_app.py       # The Streamlit web application
+├── app/                      
+│   └── Flight_Delay_app.py       # The Streamlit web application
 ├── main.py                   # Main script to run the entire training pipeline
 ├── requirements.txt          # Required Python libraries
 └── README.md                 # This file
@@ -87,4 +88,5 @@ joblib: For saving and loading the trained model.
 
 
 A complete list is available in the requirements.txt file.
+
 
